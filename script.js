@@ -47,7 +47,7 @@ function saveToStorage(name, value) {
   localStorage[name] = value;
 }
 
-function setValues() {
+function getStorageValue() {
   const properties = Object.keys(localStorage);
   properties.forEach(propertie => {
     handleStyle[propertie](localStorage[propertie]);
@@ -55,8 +55,7 @@ function setValues() {
   });
   textCss();
 }
-
-setValues();
+getStorageValue();
 
 function textCss() {
   const textCss =
